@@ -1,0 +1,15 @@
+The reports are included in the src folder. The following are provided:
+	- Emma Coverage Report (along with image)
+	- JUnit Tests Report
+	- FindBugs Report
+	
+All of these reports were generated using an eclipse plugin or jar.
+Using Eclipse:
+	To run tests add JUnit jar to directory, add jar to Run Configurations, right click on project and Run As JUnit Test.
+	To run emma add emma jar to directory, add jar to Run Configurations, right click on project and Coverage as selecting emma.
+	To run FindBugs, install plugin, right click on project and FindBugs -> FindBugs.
+		
+		
+Coverage report is less than 100 due to the requirement that emma requires a main function, but no tests are needed for this method.
+FindBugs reported no issues.
+All Tests are passing.

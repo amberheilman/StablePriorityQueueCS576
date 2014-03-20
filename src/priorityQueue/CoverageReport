@@ -1,0 +1,21 @@
+
+Element	Coverage	Covered Instructions	Missed Instructions	Total Instructions
+CS576_PriorityQueue				98.4 %	316	5	321
+src								98.4 %	316	5	321
+(default package)				97.2 %	140	4	144
+AllTests.java					97.2 %	140	4	144
+priorityQueue					99.4 %	176	1	177
+StablePriorityQueue.java		99.4 %	176	1	177
+StablePriorityQueue				99.4 %	176	1	177
+main(String[])					0.0 %	0	1	1
+StablePriorityQueue(Integer)	100.0 %	11	0	11
+clear()							100.0 %	17	0	17
+compare(Integer, Integer)		100.0 %	16	0	16
+compareTo(Integer)				100.0 %	2	0	2
+extractMaximum()				100.0 %	52	0	52
+getMaximum()					100.0 %	36	0	36
+insert(Integer)					100.0 %	13	0	13
+isEmpty()						100.0 %	7	0	7
+show()							100.0 %	19	0	19
+size()							100.0 %	3	0	3
+

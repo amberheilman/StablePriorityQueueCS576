@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="2.0.3" sequence="1" timestamp="1395328298268" analysisTimestamp="1395328297563" release="">
+  <Project projectName="CS576_PriorityQueue">
+    <Jar>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\bin</Jar>
+    <AuxClasspathEntry>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\bin</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\hamcrest-core-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\junit-4.11.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\maven-emma-plugin-0.6.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\amber-safe\Documents\GitHub\CS576_PriorityQueue\src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="EQ_COMPARETO_USE_OBJECT_EQUALS" priority="2" abbrev="Eq" category="BAD_PRACTICE" first="1">
+    <Class classname="priorityQueue.StablePriorityQueue">
+      <SourceLine classname="priorityQueue.StablePriorityQueue" sourcefile="StablePriorityQueue.java" sourcepath="priorityQueue/StablePriorityQueue.java"/>
+    </Class>
+    <Method classname="priorityQueue.StablePriorityQueue" name="compareTo" signature="(Ljava/lang/Object;)I" isStatic="false">
+      <SourceLine classname="priorityQueue.StablePriorityQueue" start="1" end="1" startBytecode="0" endBytecode="40" sourcefile="StablePriorityQueue.java" sourcepath="priorityQueue/StablePriorityQueue.java"/>
+    </Method>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Wed, 19 Mar 2014 22:29:46 -0400" total_classes="2" referenced_classes="19" total_bugs="1" total_size="110" num_packages="2" vm_version="24.45-b08" cpu_seconds="111.98" clock_seconds="4299.61" peak_mbytes="350.23" alloc_mbytes="455.00" gc_seconds="1.11" priority_2="1">
+    <PackageStats package="" total_bugs="0" total_types="1" total_size="53">
+      <ClassStats class="AllTests" sourceFile="AllTests.java" interface="false" size="53" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="priorityQueue" total_bugs="1" total_types="1" total_size="57" priority_2="1">
+      <ClassStats class="priorityQueue.StablePriorityQueue" sourceFile="StablePriorityQueue.java" interface="false" size="57" bugs="1" priority_2="1"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="112" invocations="351" avgMicrosecondsPerInvocation="319" maxMicrosecondsPerInvocation="3457" standardDeviationMircosecondsPerInvocation="458"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="111" invocations="351" avgMicrosecondsPerInvocation="316" maxMicrosecondsPerInvocation="11283" standardDeviationMircosecondsPerInvocation="851"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="101" invocations="2" avgMicrosecondsPerInvocation="50866" maxMicrosecondsPerInvocation="87148" standardDeviationMircosecondsPerInvocation="36281"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="38" invocations="320" avgMicrosecondsPerInvocation="119" maxMicrosecondsPerInvocation="29048" standardDeviationMircosecondsPerInvocation="1620"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="33" invocations="19" avgMicrosecondsPerInvocation="1788" maxMicrosecondsPerInvocation="9162" standardDeviationMircosecondsPerInvocation="2322"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="28" invocations="83" avgMicrosecondsPerInvocation="338" maxMicrosecondsPerInvocation="2157" standardDeviationMircosecondsPerInvocation="386"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="21" invocations="26" avgMicrosecondsPerInvocation="816" maxMicrosecondsPerInvocation="4418" standardDeviationMircosecondsPerInvocation="1063"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="19" invocations="25" avgMicrosecondsPerInvocation="798" maxMicrosecondsPerInvocation="2813" standardDeviationMircosecondsPerInvocation="643"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="17" invocations="26" avgMicrosecondsPerInvocation="673" maxMicrosecondsPerInvocation="3146" standardDeviationMircosecondsPerInvocation="768"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="574" maxMicrosecondsPerInvocation="2140" standardDeviationMircosecondsPerInvocation="533"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="14" invocations="26" avgMicrosecondsPerInvocation="574" maxMicrosecondsPerInvocation="3006" standardDeviationMircosecondsPerInvocation="736"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="11" invocations="19" avgMicrosecondsPerInvocation="630" maxMicrosecondsPerInvocation="2292" standardDeviationMircosecondsPerInvocation="672"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1395328298268" release="" codeSize="0" numClasses="0"/>
+  </History>
+</BugCollection>

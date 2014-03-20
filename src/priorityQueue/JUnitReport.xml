@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CS576_PriorityQueue" project="CS576_PriorityQueue" tests="13" started="13" failures="0" errors="0" ignored="0">
+  <testsuite name="AllTests" time="0.001">
+    <testcase name="firstInIsFirstOut" classname="AllTests" time="0.001"/>
+    <testcase name="getMaxDoesNotExtractMax" classname="AllTests" time="0.0"/>
+    <testcase name="compareTo" classname="AllTests" time="0.0"/>
+    <testcase name="sizeZeroGetMax" classname="AllTests" time="0.0"/>
+    <testcase name="compareReturnsNegOne" classname="AllTests" time="0.0"/>
+    <testcase name="isNotEmpty" classname="AllTests" time="0.0"/>
+    <testcase name="getCorrectSize" classname="AllTests" time="0.0"/>
+    <testcase name="compareReturnsZero" classname="AllTests" time="0.0"/>
+    <testcase name="insertInserts" classname="AllTests" time="0.0"/>
+    <testcase name="compareReturnsOne" classname="AllTests" time="0.0"/>
+    <testcase name="showPrintsList" classname="AllTests" time="0.0"/>
+    <testcase name="sizeZeroExtractMax" classname="AllTests" time="0.0"/>
+    <testcase name="isEmpty" classname="AllTests" time="0.0"/>
+  </testsuite>
+</testrun>

@@ -3,9 +3,6 @@ CS 576
 Dependable Software Systems
 Winter 2014
 
-Project Assignment
-
-
 Introduction
 ==============================================
 The goal of this assignment is to give you the opportunity to work with tools that help us become more effective in uncovering software defects.
@@ -39,42 +36,130 @@ Please submit the following items:
 	2. An emma report showing the final code coverage achieved. You should strive to achieve 100% statement coverage.
 	3. A report showing the static analysis results from FindBugs, and code improvements you made to address some (or all) of the  issues reported.
  */
-
 package priorityQueue;
-import java.util.PriorityQueue;
 
-public class StablePriorityQueue extends PriorityQueue<Integer>{
-	/**
-     * Construct an empty StablePriorityQueue.
+
+public class StablePriorityQueue implements Comparable<Integer> {
+    private Comparable<Integer>[] pq;      
+    private int size;         
+
+    /* Constructor of StablePriorityQueue
+     * 
      */
-    public StablePriorityQueue(int max){
-        //Integer[] pq = new Integer[ max ];
-    }
-    public void insert (Integer newInt) { 
-        this.add(newInt);
-    } 
-    public int getMaximum() {
-    	return this.peek();
-	}
-    public int extractMaximum() {
-    	return this.poll();
-	}
-    public boolean isEmpty () { 
-    	return this.isEmpty();
-    	//return this.size() == 0;
-    }     
-    public static void main(String args[]){
-    	StablePriorityQueue stablePQ = new StablePriorityQueue(11);
-    	for(int i=0; i<10;i++){
-	    	System.out.println("Insert i: "+ i);
-    	}
-    	System.out.println("poll:");
-    	System.out.println(stablePQ.extractMaximum());
-    	System.out.println(stablePQ);
-    	
-    	//+ "Size: " + stablePQ.size() + "getMaximum: " +stablePQ.getMaximum() + "isEmpty: " + stablePQ.isEmpty() + "extractMaximum: " + stablePQ.extractMaximum());
-    	
-    
+    public StablePriorityQueue(Integer maxIndex) {
+        pq =  new Integer[maxIndex];
+        size = 0;
     }
 
+    /* Required for comparable
+     * (non-Javadoc)
+     * @see java.lang.Comparable#compareTo(java.lang.Object)
+     * return 0
+     */
+	public int compareTo(Integer x) {
+		return 0;
+	}
+	
+	/*
+	 * Used in getMaximum and extractMaximum to order the Queue
+	 * parameters: Integer x, Integer y
+	 * return int
+	 */
+	public int compare(Integer x, Integer y) {
+		if (x < y) {
+	        return -1;
+	    }
+	    if (x > y) {
+	        return 1;
+	    }
+	    return 0;
+	}
+	
+	/* Checks if the Queue is empty
+	 * returns boolean
+	 */
+    public boolean isEmpty() { 
+    	return size == 0; 
+    }
+    
+    /* Gets the size of the Queue
+     * return Integer
+     */
+    public int size() { 
+    	return size;      
+    }
+    
+    /* Adds an Integer to the Queue
+     * paramaters: Integer x
+     */
+    public void insert(Integer x) { 
+    	pq[size] = x;
+    	size++;
+    }
+
+    /* Removes the Maximum element from the Queue
+     * return Comparable<Integer>
+     */
+    public Comparable<Integer> extractMaximum() {
+    	if (size == 0) {
+    		return null; 
+    	}
+
+        int maxIndex = 0; 
+
+        for (int i=1; i<size; i++) { 
+            if (compare( (Integer) pq[i], (Integer) pq[maxIndex]) > 0) { 
+                maxIndex = i; 
+            } 
+        } 
+        Comparable<Integer> result = pq[maxIndex]; 
+
+        size--; 
+        pq[maxIndex] = pq[size]; 
+        return result;
+    }
+
+    /* Returns the maximum element from the Queue
+     * return Integer
+     */
+    public Integer getMaximum() {
+    	if (size == 0) {
+    		return null; 
+    	}
+
+        int maxIndex = 0; 
+
+        for (int i=1; i<size; i++) { 
+            if (compare( (Integer) pq[i], (Integer) pq[maxIndex]) > 0) { 
+                maxIndex = i; 
+            } 
+        } 
+        return (Integer) pq[maxIndex];
+    }
+    
+    /* Clears the contents of the PriorityQueue
+     */
+	public void clear() {
+		for (int i = 0; i < size; i++) {
+	        pq[i] = null;
+		}	    
+		size = 0;
+	}
+	
+	/* Will print the entirety of the PriorityQueue
+	 */
+	public void show(){
+		for(int i = 0; i < size; i++) {
+			System.out.print(i + " ");
+		}
+	}
+	public static void main(String[] args) {
+		
+	}
 }
+
+
+
+
+    
+
